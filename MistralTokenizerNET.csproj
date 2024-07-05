@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <PackageId>Alluseri.MistralTokenizer</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Alluseri</Authors>
+    <Company>lunahook.dev ltd.</Company>
+    
+    <!--<DefineConstants>$(DefineConstants);MT_NET_PROFILE_INIT</DefineConstants> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <Compile Remove="test\**" />
+    <!--<PackageReference Include="BenchmarkDotNet" Version="0.13.5" />-->
+    <EmbeddedResource Include="res\merges.b64" />
+    <EmbeddedResource Include="res\tokens.b64" />
+  </ItemGroup>
+
+</Project>
